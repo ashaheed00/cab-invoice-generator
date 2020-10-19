@@ -10,11 +10,11 @@ public class InvoiceGenerator {
 		return fare < 5 ? MINIMUM_FARE : fare;
 	}
 
-	public double calculateFare(Ride[] rides) {
+	public InvoiceSummary calculateFare(Ride[] rides) {
 		double totalFare = 0;
 		for (Ride ride : rides)
 			totalFare += calculateFare(ride.distance, ride.timeInMinute);
-		return totalFare;
+		return new InvoiceSummary(rides.length, totalFare);
 	}
 
 }
