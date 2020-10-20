@@ -6,7 +6,6 @@ public class InvoiceSummary {
 	private double avgFarePerRide;
 
 	public InvoiceSummary(int totalRides, double totalFare) {
-		super();
 		this.totalRides = totalRides;
 		this.totalFare = totalFare;
 		this.avgFarePerRide = totalFare / totalRides;
